@@ -1,1 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Riddle 1</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #111;
+      color: #eee;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Riddle 1</h1>
+  <p>What has keys but can't open locks?</p>
 
+  <input type="text" id="answer" placeholder="Your answer">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "keyboard") {
+        window.location.href = "riddle2.html"; // redirect to next riddle
+      } else {
+        alert("Try again!");
+      }
+    }
+  </script>
+</body>
+</html>
