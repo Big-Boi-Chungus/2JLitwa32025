@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Riddle 1</title>
+  <title>Welcome to the New Dawn</title>
   <style>
     body {
       font-family: sans-serif;
@@ -22,8 +22,8 @@
   </style>
 </head>
 <body>
-  <h1>Riddle 1</h1>
-  <p>What has keys but can't open locks?</p>
+  <h1>Welcome to the New Dawn</h1>
+  <p>Progress through this puzzle to reveal secrets long buried.</p>
 
   <input type="text" id="answer" placeholder="Your answer">
   <button onclick="checkAnswer()">Submit</button>
@@ -31,7 +31,7 @@
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "keyboard") {
+      if (input === "echo") {
         window.location.href = "riddle2.html"; // redirect to next riddle
       } else {
         alert("Try again!");
@@ -40,3 +40,4 @@
   </script>
 </body>
 </html>
+
