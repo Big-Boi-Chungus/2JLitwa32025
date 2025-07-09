@@ -19,29 +19,29 @@
       font-size: 16px;
       margin-left: 10px;
     }
-    .invisible {
-      color: #111; /* same as background */
-      font-size: 14px;
-      margin-top: 20px;
-    }
   </style>
 </head>
 <body>
   <h1>Welcome to the New Dawn</h1>
-  <p>Progress through these puzzles to reveal secrets long buried.</p>
+  <p>Are you ready? (Type <code>y/n</code>)</p>
 
   <input type="text" id="answer" placeholder="Your answer">
   <button onclick="checkAnswer()">Submit</button>
 
-  <p class="invisible">67</p> <!-- Hidden answer -->
-
   <script>
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "67") {
+      if (input === "y/n") {
         window.location.href = "riddle2.html";
       } else {
-        alert("Try again!");
+        const responses = [
+          "Not quite.",
+          "The truth evades you.",
+          "Try harder.",
+          "Your answer is... insufficient.",
+          "The key is not yet yours."
+        ];
+        alert(responses[Math.floor(Math.random() * responses.length)]);
       }
     }
   </script>
