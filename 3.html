@@ -25,12 +25,6 @@
       letter-spacing: 2px;
       user-select: all;
     }
-    .hint {
-      font-size: 14px;
-      color: #888;
-      margin-top: 10px;
-      font-style: italic;
-    }
   </style>
 </head>
 <body>
@@ -39,18 +33,28 @@
 
   <div class="cipher">srzhu fruuxswv doo phq</div>
 
-  <p class="hint">Hint: Shift letters 3 places back to find the original phrase.</p>
-
   <input type="text" id="answer" placeholder="Your answer (exact phrase)">
   <button onclick="checkAnswer()">Submit</button>
 
   <script>
+    const failMessages = [
+      "That reflection is distorted. Try again.",
+      "The truth slips through your fingers... once more.",
+      "Echoes of the past mock your attempt. Try again.",
+      "The shadows hide your answer. Seek again.",
+      "The cipher refuses your guess. Try once more.",
+      "A mirage, not the truth. Try again.",
+      "Your vision blurs. Attempt again.",
+      "The code laughs at you. Try again."
+    ];
+
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
       if (input === "power corrupts all men") {
         window.location.href = "riddle4.html";
       } else {
-        alert("That reflection is distorted. Try again.");
+        const randomIndex = Math.floor(Math.random() * failMessages.length);
+        alert(failMessages[randomIndex]);
       }
     }
   </script>
