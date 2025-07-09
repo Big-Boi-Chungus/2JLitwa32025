@@ -1,1 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Reflections of the Past</title>
+  <style>
+    body {
+      font-family: monospace;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #111;
+      color: #eee;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .cipher {
+      font-size: 20px;
+      margin-top: 30px;
+      letter-spacing: 2px;
+      user-select: all;
+    }
+    .hint {
+      font-size: 14px;
+      color: #888;
+      margin-top: 10px;
+      font-style: italic;
+    }
+  </style>
+</head>
+<body>
+  <h1>Reflections of the Past</h1>
+  <p>Decode the message below to find your next destination.</p>
 
+  <div class="cipher">srzhu fruuxswv doo phq</div>
+
+  <p class="hint">Hint: Shift letters 3 places back to find the original phrase.</p>
+
+  <input type="text" id="answer" placeholder="Your answer (exact phrase)">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "power corrupts all men") {
+        window.location.href = "riddle4.html";
+      } else {
+        alert("That reflection is distorted. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
