@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>The Hidden Truth</title>
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding-top: 100px;
+      background-color: #111;
+      color: #eee;
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+    .invisible {
+      color: #111;
+      user-select: text;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>The Hidden Truth</h1>
+  <p>Find the secret message hidden in plain sight and enter it below.</p>
+
+  <input type="text" id="answer" placeholder="Your answer">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <p class="invisible">67</p> 
+
+  <script>
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "67") {
+        window.location.href = "riddle3.html"; // next page
+      } else {
+        alert("The secret eludes you. Try again.");
+      }
+    }
+  </script>
+</body>
+</html>
