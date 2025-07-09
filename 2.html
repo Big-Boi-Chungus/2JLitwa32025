@@ -41,7 +41,14 @@
       if (input === "67") {
         window.location.href = "riddle3.html"; // next page
       } else {
-        alert("The secret eludes you. Try again.");
+        const responses = [
+          "Not quite.",
+          "The truth evades you.",
+          "Try harder.",
+          "Your answer is... insufficient.",
+          "The key is not yet yours."
+        ];
+        alert(responses[Math.floor(Math.random() * responses.length)]);
       }
     }
   </script>
