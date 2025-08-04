@@ -32,7 +32,7 @@
   <h1>Look Closer</h1>
   <p>Something is hidden where all can see.</p>
 
-  <img src="Hiddenclue.png" alt="Hidden clue">
+  <img src="Hiddenclue.png" alt="Hidden clue" style="width:50%; height:auto;">
 
   <input type="text" id="answer" placeholder="Your answer">
   <button onclick="checkAnswer()">Submit</button>
@@ -47,7 +47,7 @@
 
     function checkAnswer() {
       const input = document.getElementById("answer").value.toLowerCase().trim();
-      if (input === "you too, james?") {
+      if (input === "you too, James?") {
         window.location.href = "riddle5.html";
       } else {
         const randomIndex = Math.floor(Math.random() * failMessages.length);
