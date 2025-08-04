@@ -1,1 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Look Closer</title>
+  <style>
+    body {
+      font-family: monospace;
+      text-align: center;
+      padding-top: 50px;
+      background-color: #111;
+      color: #eee;
+    }
+    img {
+      margin-top: 30px;
+      max-width: 90%;
+      height: auto;
+      filter: brightness(0.9);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-left: 10px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Look Closer</h1>
+  <p>Something is hidden where all can see.</p>
 
+  <img src="hiddenclue.png" alt="Hidden clue">
+
+  <input type="text" id="answer" placeholder="Your answer">
+  <button onclick="checkAnswer()">Submit</button>
+
+  <script>
+    const failMessages = [
+      "The truth escapes your gaze.",
+      "Look deeper; it’s still there.",
+      "The shadows keep their secrets.",
+      "A hidden message remains unseen."
+    ];
+
+    function checkAnswer() {
+      const input = document.getElementById("answer").value.toLowerCase().trim();
+      if (input === "you too, james?") {
+        window.location.href = "riddle5.html";
+      } else {
+        const randomIndex = Math.floor(Math.random() * failMessages.length);
+        alert(failMessages[randomIndex]);
+      }
+    }
+  </script>
+</body>
+</html>
