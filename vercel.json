@@ -1,7 +1,7 @@
 {
   "redirects": [
     {
-      "source": "/(riddle1|riddle2|riddle3|riddle4|riddle5|final)",
+      "source": "/(1|2|3|-4|-5|finale)",
       "destination": "/$1",
       "permanent": false
     },
